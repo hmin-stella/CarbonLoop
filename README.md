@@ -31,3 +31,7 @@ Finally, `m01_integrate_with_act.ipynb` generates the carbon footprint of the ex
 # Authors
 Eunseok Lee (eunseok@mit.edu)\
 Hyemin Stella Lee (hmstella@mit.edu)
+
+# References
+* [ACT: Architectural Carbon Modeling Tool](https://github.com/alugupta/ACT)
+* [Timeloop](https://github.com/Accelergy-Project/timeloop-accelergy-exercises)

@@ -1,6 +1,7 @@
 dram_utilized_capacity:
-  input: 151875.0
-  output: 401408.0
-  weight: 864.0
-total_chip_area_um2: 255599.3
-total_energy_uJ: 59.28
+  input: 262144.0
+  output: 786432.0
+  weight: 3145728.0
+total_chip_area_um2: 1207188.56
+total_cycles: 8388608
+total_energy_uJ: 6751.38

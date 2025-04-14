@@ -13,7 +13,6 @@ TOP_JINJA_PATH = os.path.join(EXAMPLE_DIR, "top.yaml.jinja2")
 def run_mapper(
     arch_target,
     problem: Optional[str] = None,
-    remove_sparse_opts: Optional[bool] = False,
 ):
     # This data will be supplied when rendering the top jinja2 template
     jinja_parse_data = {"architecture": arch_target}

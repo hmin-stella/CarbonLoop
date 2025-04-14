@@ -1,7 +1,4 @@
-dram_utilized_capacity:
-  input: 262144.0
-  output: 786432.0
-  weight: 3145728.0
-total_chip_area_um2: 1207188.56
-total_cycles: 8388608
-total_energy_uJ: 6751.38
+dram_utilized_capacity: 49997824.0
+total_chip_area_um2: 16900639.840000004
+total_cycles: 134258688
+total_energy_uJ: 72489.46999999999

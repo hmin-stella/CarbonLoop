@@ -1,0 +1,6 @@
+dram_utilized_capacity:
+  input: 151875.0
+  output: 401408.0
+  weight: 864.0
+total_chip_area_um2: 255599.3
+total_energy_uJ: 59.28

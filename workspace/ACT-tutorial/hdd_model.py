@@ -7,6 +7,7 @@
 import json
 import sys
 
+
 class Fab_HDD():
     def __init__(self, config="BarraCuda"):
         ###############################

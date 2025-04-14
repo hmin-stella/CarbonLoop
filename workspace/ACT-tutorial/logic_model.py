@@ -7,6 +7,7 @@
 import json
 import sys
 
+
 class Fab_Logic():
     def __init__(self, process_node=14,
                        gpa="97",

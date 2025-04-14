@@ -7,6 +7,7 @@
 import json
 import sys
 
+
 class Fab_DRAM():
     def __init__(self,  config = "ddr4_10nm", fab_yield=0.875):
 

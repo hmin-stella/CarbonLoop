@@ -7,6 +7,7 @@
 import json
 import sys
 
+
 class Fab_SSD():
     def __init__(self, config="nand_10nm", fab_yield=0.875):
         ###############################

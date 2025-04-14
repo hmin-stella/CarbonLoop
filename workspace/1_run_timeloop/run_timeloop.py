@@ -45,6 +45,7 @@ if __name__ == "__main__":
     args = get_arguments()
     args.architecture = 'eyeriss_like'
     args.problem = 'gpt2'
+    args.n_jobs = 10
 
     arch = args.architecture
 

@@ -10,7 +10,8 @@ import sys
 class Fab_Logic():
     def __init__(self, process_node=14,
                        gpa="97",
-                       carbon_intensity="loc_taiwan",
+                       fab_carbon_intensity="loc_taiwan",
+                       use_carbon_intensity="loc_usa",
                        debug=False,
                        fab_yield=0.875):
 
@@ -19,30 +20,30 @@ class Fab_Logic():
         ###############################
         # Energy per unit area
         ###############################
-        with open("logic/epa.json", 'r') as f:
+        with open("/home/workspace/ACT-tutorial/logic/epa.json", 'r') as f:
             epa_config = json.load(f)
 
         ###############################
         # Raw materials per unit area
         ###############################
-        with open("logic/materials.json", 'r') as f:
+        with open("/home/workspace/ACT-tutorial/logic/materials.json", 'r') as f:
             materials_config = json.load(f)
 
         ###############################
         # Gasses per unit area
         ###############################
         if gpa == "95":
-            with open("logic/gpa_95.json", 'r') as f:
+            with open("/home/workspace/ACT-tutorial/logic/gpa_95.json", 'r') as f:
                 gpa_config = json.load(f)
 
         elif gpa == "99":
-            with open("logic/gpa_99.json", 'r') as f:
+            with open("/home/workspace/ACT-tutorial/logic/gpa_99.json", 'r') as f:
                 gpa_config = json.load(f)
 
         elif gpa == "97":
-            with open("logic/gpa_95.json", 'r') as f:
+            with open("/home/workspace/ACT-tutorial/logic/gpa_95.json", 'r') as f:
                 gpa_95_config = json.load(f)
-            with open("logic/gpa_99.json", 'r') as f:
+            with open("/home/workspace/ACT-tutorial/logic/gpa_99.json", 'r') as f:
                 gpa_99_config = json.load(f)
 
             gpa_config = {}
@@ -57,21 +58,21 @@ class Fab_Logic():
         ###############################
         # Carbon intensity of fab
         ###############################
-        if "loc" in carbon_intensity:
-            with open("carbon_intensity/location.json", 'r') as f:
+        if "loc" in fab_carbon_intensity:
+            with open("/home/workspace/ACT-tutorial/carbon_intensity/location.json", 'r') as f:
                 loc_configs = json.load(f)
 
-                loc = carbon_intensity.replace("loc_", "")
+                loc = fab_carbon_intensity.replace("loc_", "")
 
                 assert loc in loc_configs.keys()
 
                 fab_ci = loc_configs[loc]
 
-        elif "src" in carbon_intensity:
-            with open("carbon_intensity/source.json", 'r') as f:
+        elif "src" in fab_carbon_intensity:
+            with open("/home/workspace/ACT-tutorial/carbon_intensity/source.json", 'r') as f:
                 src_configs = json.load(f)
 
-                src = carbon_intensity.replace("src_", "")
+                src = fab_carbon_intensity.replace("src_", "")
 
                 assert src in src_configs.keys()
 
@@ -80,6 +81,15 @@ class Fab_Logic():
         else:
             print("Error: Carbon intensity must either be loc | src dependent")
             sys.exit()
+
+
+        ###############################
+        # Carbon intensity of user
+        ###############################
+        with open("/home/workspace/ACT-tutorial/carbon_intensity/location.json", 'r') as f:
+            loc_configs = json.load(f)
+            loc = use_carbon_intensity.replace("loc_", "")
+            self.use_ci = loc_configs[loc]
 
         ###############################
         # Aggregating model
@@ -117,4 +127,5 @@ class Fab_Logic():
     def get_carbon(self, ):
         return self.carbon
 
-
+    def get_use_ci(self, ):
+        return self.use_ci

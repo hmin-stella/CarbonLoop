@@ -12,10 +12,10 @@ class Fab_HDD():
         ###############################
         # Carbon per capacity
         ###############################
-        with open("hdd/hdd_consumer.json", 'r') as f:
+        with open("/home/workspace/ACT-tutorial/hdd/hdd_consumer.json", 'r') as f:
             hdd_config = json.load(f)
 
-        with open("hdd/hdd_enterprise.json", 'r') as f:
+        with open("/home/workspace/ACT-tutorial/hdd/hdd_enterprise.json", 'r') as f:
             hdd_config.update(json.load(f))
 
         assert config in hdd_config.keys() and "HDD configuration not found"

@@ -12,13 +12,13 @@ class Fab_SSD():
         ###############################
         # Carbon per capacity
         ###############################
-        with open("ssd/ssd_hynix.json", 'r') as f:
+        with open("/home/workspace/ACT-tutorial/ssd/ssd_hynix.json", 'r') as f:
             ssd_config = json.load(f)
 
-        with open("ssd/ssd_seagate.json", 'r') as f:
+        with open("/home/workspace/ACT-tutorial/ssd/ssd_seagate.json", 'r') as f:
             ssd_config.update(json.load(f))
 
-        with open("ssd/ssd_western.json", 'r') as f:
+        with open("/home/workspace/ACT-tutorial/ssd/ssd_western.json", 'r') as f:
             ssd_config.update(json.load(f))
 
         assert config in ssd_config.keys() and "SSD configuration not found"

@@ -28,6 +28,21 @@ In `workspace/2_integrate_with_act`, run the entire Jupiter notebooks listed bel
 Finally, `m01_integrate_with_act.ipynb` generates the carbon footprint of the example task.
 
 
+# Expected Results
+```
+-----------------------------------------------
+Total Carbon Footprint    : 0.752956 kg CO2
+- Operational CF          : 0.126855 kg CO2
+- Discounted Embodied CF  : 0.626101 kg CO2
+
+- Embodied CF             : 1.043502 kg CO2
+   - Processor CF         : 0.518128 kg CO2
+   - DRAM CF              : 0.225374 kg CO2
+   - Package CF           : 0.300000 kg CO2
+----------------------------------------------
+```
+
+
 # Authors
 Eunseok Lee (eunseok@mit.edu)\
 Hyemin Stella Lee (hmstella@mit.edu)

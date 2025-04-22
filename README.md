@@ -31,15 +31,15 @@ Finally, `m01_integrate_with_act.ipynb` generates the carbon footprint of the ex
 # Expected Results
 ```
 -----------------------------------------------
-Total Carbon Footprint    : 0.752956 kg CO2
+Total Carbon Footprint    : 0.322267 kg CO2
 - Operational CF          : 0.126855 kg CO2
-- Discounted Embodied CF  : 0.626101 kg CO2
+- Discounted Embodied CF  : 0.195412 kg CO2
 
-- Embodied CF             : 1.043502 kg CO2
-   - Processor CF         : 0.518128 kg CO2
-   - DRAM CF              : 0.225374 kg CO2
+- Embodied CF             : 0.325686 kg CO2
+   - Processor CF         : 0.003573 kg CO2
+   - DRAM CF              : 0.022113 kg CO2
    - Package CF           : 0.300000 kg CO2
-----------------------------------------------
+-----------------------------------------------
 ```
 
 

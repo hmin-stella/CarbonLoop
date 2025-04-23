@@ -45,3 +45,6 @@ docker-compose.yaml
 
 .past_versions
 workspace/.bash_history
+
+# outputs
+workspace/3_CarbonLoop/outputs/**

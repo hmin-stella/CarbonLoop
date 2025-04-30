@@ -15,9 +15,11 @@ if __name__ == "__main__":
     ### Run Timeloop-Accelergy across different PE numbers ###
     args = get_arguments()
     args.architecture = 'eyeriss_like'
-    pe_list = [1,4,9,16,25,36,49,64,81,100,121,144,169,196,225,256,289,324,361,400]
+    pe_list=[]
+    for i in range(16,201,4):
+        pe_list.append(i)
     args.problem = 'gpt2'
-    args.n_jobs = 8
+    args.n_jobs = 16
 
     arch = []
     for pe in pe_list:

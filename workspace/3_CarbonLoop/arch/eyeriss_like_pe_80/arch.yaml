@@ -44,7 +44,7 @@ architecture:
 
   - !Container # Each PE in the column receives a different filter row
     name: PE
-    spatial: {meshY: 8}
+    spatial: {meshY: 10}
     constraints:
       spatial:
         split: 0

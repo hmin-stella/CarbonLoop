@@ -35,7 +35,7 @@ architecture:
 
   - !Container # Each column of PEs produces a different psum row
     name: PE_column
-    spatial: {meshX: 8}
+    spatial: {meshX: 4}
     constraints:
       spatial:
         permutation: [N, C, P, R, S, Q, M]
@@ -44,7 +44,7 @@ architecture:
 
   - !Container # Each PE in the column receives a different filter row
     name: PE
-    spatial: {meshY: 8}
+    spatial: {meshY: 6}
     constraints:
       spatial:
         split: 0

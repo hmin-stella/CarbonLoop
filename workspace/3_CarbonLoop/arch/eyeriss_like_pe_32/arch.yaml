@@ -35,7 +35,7 @@ architecture:
 
   - !Container # Each column of PEs produces a different psum row
     name: PE_column
-    spatial: {meshX: 8}
+    spatial: {meshX: 4}
     constraints:
       spatial:
         permutation: [N, C, P, R, S, Q, M]

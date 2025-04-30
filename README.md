@@ -1,4 +1,4 @@
-Carbon Footprint Modeling with Hardware Design Space Exploration
+CarbonLoop: A Systematic Modeling of Carbon Emissions in AI Accelerators
 ======================================
 
 # Instructions

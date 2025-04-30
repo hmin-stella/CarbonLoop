@@ -16,7 +16,7 @@ if __name__ == "__main__":
     args = get_arguments()
     args.architecture = 'eyeriss_like'
     pe_list=[]
-    for i in range(16,201,4):
+    for i in range(40,150,4):
         pe_list.append(i)
     args.problem = 'gpt2'
     args.n_jobs = 16

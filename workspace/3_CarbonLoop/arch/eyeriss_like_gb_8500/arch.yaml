@@ -24,7 +24,7 @@ architecture:
     name: shared_glb
     class: smartbuffer_SRAM
     attributes:
-      depth: 16384
+      depth: 8500
       width: 64
       n_banks: 32
       datawidth: 8
@@ -35,7 +35,7 @@ architecture:
 
   - !Container # Each column of PEs produces a different psum row
     name: PE_column
-    spatial: {meshX: 4}
+    spatial: {meshX: 14}
     constraints:
       spatial:
         permutation: [N, C, P, R, S, Q, M]

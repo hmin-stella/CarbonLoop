@@ -48,7 +48,8 @@ def get_arguments():
 
 def run_mapper(
     arch_target,
-    problem
+    problem,
+    output_dir_name
 ):
     THIS_SCRIPT_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))    
     EXAMPLE_DIR = os.path.join(THIS_SCRIPT_DIR, "arch")
@@ -61,7 +62,7 @@ def run_mapper(
     jinja_parse_data["problem"] = problem
 
     # Set up output directory
-    output_dir = f"{THIS_SCRIPT_DIR}/outputs/{arch_target}/{arch_target}-{problem_name}"
+    output_dir = f"{THIS_SCRIPT_DIR}/{output_dir_name}/{arch_target}/{arch_target}-{problem_name}"
 
     print(f"\n\nRunning mapper for target {arch_target} in {output_dir}...")
 

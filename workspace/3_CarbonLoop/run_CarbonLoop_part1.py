@@ -12,19 +12,20 @@ TOP_JINJA_PATH = os.path.join(EXAMPLE_DIR, "top.yaml.jinja2")
 
 
 if __name__ == "__main__":
-    ### Run Timeloop-Accelergy across different PE numbers ###
+    ### Run Timeloop-Accelergy ###
+    ## USER INPUT ##
     args = get_arguments()
     args.architecture = 'eyeriss_like'
-    pe_list=[]
-    for i in range(40,150,4):
-        pe_list.append(i)
+    mode = 'pe'
+    sweep_list = [56]
     args.problem = 'gpt2'
-    args.n_jobs = 16
-
+    ################
+    
     arch = []
-    for pe in pe_list:
-        arch.append(args.architecture+'_pe_'+str(pe))
-
+    for sweep in sweep_list:
+        arch.append(args.architecture+'_'+mode+'_'+str(sweep))
+    args.n_jobs = 16
+    
     # Put togher the list of problems to run
     problems = [None]
     if args.problem:
@@ -41,7 +42,7 @@ if __name__ == "__main__":
     # Run parallel processes for all architectures and problems
     joblib.Parallel(n_jobs=args.n_jobs)(
         joblib.delayed(run_mapper)(
-            a, p
+            a, p, 'outputs-'+mode
         )
         for a in arch
         for p in sorted(problems)

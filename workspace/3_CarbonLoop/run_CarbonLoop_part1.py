@@ -16,8 +16,8 @@ if __name__ == "__main__":
     ## USER INPUT ##
     args = get_arguments()
     args.architecture = 'eyeriss_like'
-    mode = 'pe'
-    sweep_list = [56]
+    mode = 'gb'
+    sweep_list = [x for x in range(4000,12001,500)]
     args.problem = 'gpt2'
     ################
     
